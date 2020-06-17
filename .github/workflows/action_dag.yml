@@ -16,4 +16,4 @@ jobs:
 
       - env:
           PROJECT: qwiklabs-gcp-00-f57819e874a0
-        run: deploy_dag.sh
+        run: ./ci/deploy_dag.sh
