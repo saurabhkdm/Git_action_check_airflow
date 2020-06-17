@@ -1,0 +1,21 @@
+---
+name: Deployment
+
+'on':
+  push:
+    - master
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v2
+
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          version: "292.0.0"
+          project_id: "qwiklabs-gcp-00-f57819e874a0"
+          service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+
+      - env:
+          PROJECT: qwiklabs-gcp-00-f57819e874a0
+        run: deploy_dag.sh
