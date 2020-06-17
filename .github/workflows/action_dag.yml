@@ -13,6 +13,7 @@ jobs:
           version: "292.0.0"
           project_id: "qwiklabs-gcp-00-f57819e874a0"
           service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+      - run: gcloud info
 
       - env:
           PROJECT: qwiklabs-gcp-00-f57819e874a0
