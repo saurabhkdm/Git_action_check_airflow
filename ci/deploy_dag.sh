@@ -1,5 +1,5 @@
 #!/bin/bash
 
-bucket_var=gsutil ls -r  gs://automationbucket2/
+bucket_var=gsutil ls -r  	gs://us-central1-highcpu-f020de7b-bucket/dags/
 
-gsutil cp *.txt  gs://automationbucket2/
+gsutil cp *.py  	gs://us-central1-highcpu-f020de7b-bucket/dags/
