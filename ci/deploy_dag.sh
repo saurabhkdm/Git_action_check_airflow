@@ -1,7 +1,5 @@
 #!/bin/bash
 
 
-gcloud composer environments storage dags import \
-    --environment highcpu \
-    --location us-central1 \
-    --source *.py
+	
+gsutil cp helloworld2.py gs://us-central1-highcpu-f020de7b-bucket
