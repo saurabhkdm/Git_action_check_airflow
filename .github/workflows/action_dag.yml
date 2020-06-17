@@ -11,10 +11,10 @@ jobs:
       - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
           version: "292.0.0"
-          project_id: "qwiklabs-gcp-00-f57819e874a0"
+          project_id: "qwiklabs-gcp-00-e3f9d53817da"
           service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS}}
       - run: chmod +x ./ci/deploy_dag.sh
 
       - env:
-          PROJECT: qwiklabs-gcp-00-f57819e874a0
+          PROJECT: qwiklabs-gcp-00-e3f9d53817da
         run: ./ci/deploy_dag.sh
